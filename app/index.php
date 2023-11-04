@@ -22,7 +22,7 @@ $conn->set_charset("utf8");
 $keyword = $_GET["text"];
 
 // كتابة استعلام SQL للبحث عن البيانات التي تحتوي على الكلمة الرئيسية
-$sql = "SELECT * FROM company WHERE stutes or country or name or type or dis LIKE '%$keyword%'";
+$sql = "SELECT * FROM company WHERE stutes LIKE '%$keyword%' or country LIKE '%$keyword%' or name LIKE '%$keyword%' or type LIKE '%$keyword%' or dis LIKE '%$keyword%'";
 
 // تنفيذ الاستعلام والحصول على النتائج
 $result = $conn->query($sql);
@@ -62,8 +62,8 @@ $conn->close();
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">الشركات</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#download">تحميل التطبيق</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="../">الشركات</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="../">تحميل التطبيق</a></li>
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span class="d-flex align-items-center">
@@ -152,7 +152,7 @@ $conn->close();
                     <div class="h1 fs-1 text-black mb-4 text-center">اعثر على الشركة الداعمة للاحتلال الصهيوني</div>
                         <form action="" method="get">
 
-                        <input type="text" name="text" class="input" placeholder="بحث ......">
+                        <input type="text" name="text" class="input" placeholder="بحث">
                         
 <button class="button">
 

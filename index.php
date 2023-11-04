@@ -117,7 +117,7 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
                         <div class="h1 fs-1 text-black mb-4 text-center">اعثر على الشركة الداعمة للاحتلال الصهيوني</div>
-                        <form action="php/search.php" method="get">
+                        <form action="app" method="get">
 
                         <input type="text" name="text" class="input" placeholder="بحث ......">
                         
